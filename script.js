@@ -9,7 +9,7 @@ let nameInput = document.querySelector("#name");
 let amountInput = document.querySelector("#amount");
 let dateInput = document.querySelector("#date");
 let button = document.getElementById("newBtn");
-let div = document.getElementById("div1");
+let div = document.getElementById("div2");
 
 // The event listner is awaiting for the 'click to happen'. When it does, the function is run. The .value is used here to return the value of the value attribute of a text field.The value attribute specifies the value of an <input> element. In other words, the .value will return what is inputted by user. .value is a property. We have assigned the input's to variables named name, amount & date, as these are the options for user to input.
 btnAdd.addEventListener("click", () => {
