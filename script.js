@@ -15,14 +15,13 @@ btnAdd.addEventListener("click", () => {
   let name = nameInput.value;
   let amount = amountInput.value;
   let date = dateInput.value;
-  let btn = btnRemove1.innerHTML;
 
   // The template here is to strucutre the format in which will be outputted when function is called (button click in this case). This template is for the additional elements that will be added. The same format has been used here as it is in the HTML file.
   let template = `
-<tr>
+<tr id="new">
   <td>${name}</td>
   <td>${amount}</td>
-  <td>${date}<div><button>${btn}</button></div></td>
+  <td>${date}<div class="div1"><button class="newBtn">x</button></div></td>
   </tr> 
 `;
 
@@ -30,11 +29,18 @@ btnAdd.addEventListener("click", () => {
   table.innerHTML = table.innerHTML + template;
 });
 
-let btnRemove = document.getElementById("remove");
+const button2 = document.getElementById("newRow");
 
-btnRemove.addEventListener("click", () => {
-  let childrenArr = table.children;
-  let lastChild = childrenArr[childrenArr.length - 1];
-  lastChild.remove();
-  console.log(`test`);
+button2.addEventListener("click", function handleClick(event) {
+  console.log(event.target);
+  event.target.remove();
 });
+
+// let btnRemove = document.getElementById("remove");
+
+// btnRemove.addEventListener("click", () => {
+//   let childrenArr = table.children;
+//   let lastChild = childrenArr[childrenArr.length - 1];
+//   lastChild.remove();
+//   console.log(`test`);
+// });
